@@ -1,0 +1,32 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Strategy
+{
+    class MovementStrategyClass
+    {
+        //вид палива, 0 - бензин, 1 - газ, 2 - електрика
+        byte strategy;
+
+        double distance;//відстань яку може проїхати автомобіль
+        double fuel;//кількість палива у баку
+
+        CarMovementStrategy _strategy;
+        public MovementStrategyClass()
+        {
+
+        }
+        public MovementStrategyClass(CarMovementStrategy _strategy)
+        {
+            this._strategy = _strategy;
+        }
+        public void SetMovementStrategy(CarMovementStrategy _strategy)
+        {
+            this._strategy = _strategy;
+        }
+
+    }
+}
